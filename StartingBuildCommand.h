@@ -5,7 +5,7 @@
 
 class StartingBuildCommand : public Command {
   public:
-    StartingBuildCommand(Player *player, LiquidCrystal *lcd);
+    StartingBuildCommand(Player *player, LiquidCrystal *lcd, int light);
     void Execute();
 };
 

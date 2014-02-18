@@ -1,12 +1,15 @@
 #include "BrokenBuildCommand.h"
+#include <Arduino.h>
 
-BrokenBuildCommand::BrokenBuildCommand(Player *player, LiquidCrystal *lcd) 
-:  Command(player, lcd)
+BrokenBuildCommand::BrokenBuildCommand(Player *player, LiquidCrystal *lcd, int light) 
+:  Command(player, lcd, light)
 {
 }
 
 void BrokenBuildCommand::Execute() {
-  _lcd->print("Broken Buidl!!");
+  digitalWrite(_light, HIGH);
+  _lcd->clear();
+  _lcd->print(_text);
   _player->playMarioDeath();
 
 }

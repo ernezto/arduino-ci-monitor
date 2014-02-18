@@ -5,7 +5,7 @@
 
 class PassedBuildCommand : public Command {
   public:
-    PassedBuildCommand(Player *player, LiquidCrystal *lcd);
+    PassedBuildCommand(Player *player, LiquidCrystal *lcd, int light);
     void Execute();
 };
 

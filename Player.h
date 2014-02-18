@@ -6,6 +6,7 @@
 class Player {
   
   public:
+    Player(int buzzerPin);
     void playMarioDeath();
     void playMarioFlagPole();
     void playMarioGameOver();
@@ -14,7 +15,7 @@ class Player {
     void setBuzzerPin(int buzzerPin);
 
   private:
-    int buzzerPin;
+    int _buzzerPin;
     void play(const int melody[]);
 };
 

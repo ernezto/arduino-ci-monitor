@@ -1,12 +1,15 @@
 #include "StartingBuildCommand.h"
+#include <Arduino.h>
 
-StartingBuildCommand::StartingBuildCommand(Player *player, LiquidCrystal *lcd) 
-:  Command(player, lcd)
+StartingBuildCommand::StartingBuildCommand(Player *player, LiquidCrystal *lcd, int light) 
+:  Command(player, lcd, light)
 {
 }
 
 void StartingBuildCommand::Execute() {
-  _lcd->print("Build starting");
+  digitalWrite(_light, HIGH);
+  _lcd->clear();
+  _lcd->print(_text);
   _player->playMarioTheme();
 
 }

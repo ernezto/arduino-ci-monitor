@@ -6,12 +6,15 @@
 
 class Command {
   public:
-    Command(Player *player, LiquidCrystal *lcd);
+    Command(Player *player, LiquidCrystal *lcd, int light);
+    void setText(String text);
     virtual void Execute() = 0;
   
   protected:
     Player *_player;
     LiquidCrystal *_lcd;
+    String _text;
+    int _light;
 };
 
 #endif
