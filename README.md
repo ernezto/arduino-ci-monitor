@@ -30,10 +30,10 @@ And `<text to display>` is an string to show on the LCD. We usually sent the nam
 
 For each command, the arduino reacts in a different way:
 
-__Build Passed__: RGB led turns on with a green light and buzzer plays the super mario bros flag pole song
-
-__Stage Started to Deploy Command__: RGB led strobes with a green light and buzzer plays the super mario bros main theme
-
-__Build is Broken Command__: RGB turns on with a red light and buzzer plays super mario bros mario death theme.
+|          __Command__               |       __RGB Led__            |                    __Buzzer__                 |
+|------------------------------------|------------------------------|-----------------------------------------------|
+|       __Build Passed__             |turns on with a green light   | plays the super mario bros flag pole song     |
+|__Stage Started to Deploy Command__ |strobes with a green light    | plays the super mario bros main theme         |
+|__Build is Broken Command__         |turns on with a red light     | plays super mario bros mario death theme.     |
 
 Feel free to use and modify this project for your needs or report your bugs or improvements.
