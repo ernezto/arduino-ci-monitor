@@ -13,18 +13,20 @@ commands to display the CI status.
 The circuit is compose by an Arduino Board, a RGB Led, a Buzzer and a
 LCD. Each commands is sent to the board using the USB serial connection, with a pattern like:
 
-‘‘‘
+```
 command: <number>, print: <text to display>
 
-‘‘‘
+```
 
-Where <number> is an integer value in range [1..3]:
+Where `<number>` is an integer value in range [1..3]:
 
 Number 1 means: __Build Passed Command__
+
 Number 2 means: __Stage Started to Deploy Command__
+
 Number 3: means: __Build is Broken Command__
 
-And <text to display> is an string to show on the LCD. We usually sent the name of the stage
+And `<text to display>` is an string to show on the LCD. We usually sent the name of the stage
 
 For each command, the arduino reacts in a different way:
 
